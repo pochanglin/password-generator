@@ -21,7 +21,11 @@
 </div>
 
 <div>
-  <button (click)="onButtonClick()">Generate</button>
+  <button 
+    (click)="onButtonClick()" 
+    [disabled]="!(length && (isUseLetters || isUseNumbers || isUseSymbols))" >
+    Generate
+  </button>
 </div>
 
 <div>
